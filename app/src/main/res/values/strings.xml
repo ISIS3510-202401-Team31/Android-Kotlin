@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">UniFood</string>
+    <string name="login">Login</string>
+    <string name="sing_up">Sing Up</string>
 </resources>
