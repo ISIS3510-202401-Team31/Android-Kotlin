@@ -12,25 +12,25 @@
         android:scaleType="centerCrop" />
 
     <Button
-        android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="220dp"
-        android:background="#E2D2B4"
-        android:textSize="18sp"
-        android:padding="10dp" />
-
-    <Button
         android:id="@+id/signUpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
         android:layout_centerHorizontal="true"
-        android:layout_above="@id/loginButton"
-        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="180dp"
+        android:background="#E2D2B4"
+        android:textSize="18sp"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/signUpButton"
+        android:layout_marginBottom="25dp"
         android:background="#E2D2B4"
         android:textSize="18sp"
         android:padding="10dp" />
