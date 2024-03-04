@@ -4,26 +4,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.widget.Button
+import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
-        val signUpButton: Button = findViewById(R.id.signUpButton)
+        val signUpLinkTextView: TextView = findViewById(R.id.signUpLinkTextView)
         val loginButton: Button = findViewById(R.id.loginButton)
 
-        signUpButton.setOnClickListener {
+        signUpLinkTextView.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
 
         loginButton.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            // Aquí puedes poner el código para realizar la autenticación del usuario
         }
     }
 }
-
-
-

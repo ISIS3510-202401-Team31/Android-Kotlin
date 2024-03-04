@@ -19,7 +19,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="180dp"
-        android:background="#E2D2B4"
+        android:background="@color/fourth"
         android:textSize="18sp"
         android:padding="10dp" />
 
@@ -31,7 +31,7 @@
         android:layout_centerHorizontal="true"
         android:layout_above="@id/signUpButton"
         android:layout_marginBottom="25dp"
-        android:background="#E2D2B4"
+        android:background="@color/fourth"
         android:textSize="18sp"
         android:padding="10dp" />
 
