@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_boton">
+    android:background="@color/fifth">
 
     <TextView
         android:id="@+id/textView2"
@@ -56,7 +56,7 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/background_boton"
+                    android:background="#F3F3F3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -264,7 +264,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="50dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -277,7 +277,7 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/imageView5"
+                            android:id="@+id/imageFavorite"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
                             android:src="@tools:sample/avatars"
@@ -287,7 +287,7 @@
                             app:srcCompat="@drawable/favorite_icon" />
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id/textFavorite"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -296,18 +296,19 @@
                             android:textSize="15sp"
                             android:textStyle="normal"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/imageView5"
+                            app:layout_constraintStart_toEndOf="@+id/imageFavorite"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/imageNext1"
                             android:layout_width="41dp"
                             android:layout_height="34dp"
+                            android:layout_marginTop="10dp"
                             android:src="@tools:sample/avatars"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.924"
-                            app:layout_constraintStart_toEndOf="@+id/textView5"
+                            app:layout_constraintStart_toEndOf="@+id/textFavorite"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.0"
                             app:srcCompat="@drawable/icon_next" />
@@ -319,41 +320,41 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/imagePreference"
                     android:layout_width="0dp"
                     android:layout_height="20dp"
                     android:src="@tools:sample/avatars"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/favorite_icon" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textPreference"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Your favorites"
+                    android:text="Your preferences"
                     android:textColor="@color/second"
                     android:textSize="15sp"
                     android:textStyle="normal"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintStart_toEndOf="@+id/imagePreference"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/imageNext2"
                     android:layout_width="41dp"
                     android:layout_height="34dp"
+                    android:layout_marginTop="10dp"
                     android:src="@tools:sample/avatars"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.924"
-                    app:layout_constraintStart_toEndOf="@+id/textView5"
+                    app:layout_constraintStart_toEndOf="@+id/textPreference"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/icon_next" />
@@ -375,7 +376,7 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/imageView5"
+                            android:id="@+id/imagePoint"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
                             android:src="@tools:sample/avatars"
@@ -385,27 +386,82 @@
                             app:srcCompat="@drawable/favorite_icon" />
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id/textPoint"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Your favorites"
+                            android:text="Your points"
                             android:textColor="@color/second"
                             android:textSize="15sp"
                             android:textStyle="normal"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/imageView5"
+                            app:layout_constraintStart_toEndOf="@+id/imagePoint"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/imageNext3"
                             android:layout_width="41dp"
                             android:layout_height="34dp"
                             android:src="@tools:sample/avatars"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.924"
-                            app:layout_constraintStart_toEndOf="@+id/textView5"
+                            app:layout_constraintStart_toEndOf="@+id/textPoint"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:srcCompat="@drawable/icon_next" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imageHelp"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:src="@tools:sample/avatars"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/favorite_icon" />
+
+                        <TextView
+                            android:id="@+id/textHelp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Help & FAQs"
+                            android:textColor="@color/second"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageHelp"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageNext4"
+                            android:layout_width="41dp"
+                            android:layout_height="34dp"
+                            android:src="@tools:sample/avatars"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.924"
+                            app:layout_constraintStart_toEndOf="@+id/textHelp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.0"
                             app:srcCompat="@drawable/icon_next" />
@@ -430,7 +486,7 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/imageView5"
+                            android:id="@+id/imageLogout"
                             android:layout_width="0dp"
                             android:layout_height="20dp"
                             android:src="@tools:sample/avatars"
@@ -440,82 +496,27 @@
                             app:srcCompat="@drawable/favorite_icon" />
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id/textLogout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Your favorites"
+                            android:text="Log Out"
                             android:textColor="@color/second"
                             android:textSize="15sp"
                             android:textStyle="normal"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/imageView5"
+                            app:layout_constraintStart_toEndOf="@+id/imageLogout"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/imageNext5"
                             android:layout_width="41dp"
                             android:layout_height="34dp"
                             android:src="@tools:sample/avatars"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.924"
-                            app:layout_constraintStart_toEndOf="@+id/textView5"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/icon_next" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/imageView5"
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:src="@tools:sample/avatars"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/favorite_icon" />
-
-                        <TextView
-                            android:id="@+id/textView5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Your favorites"
-                            android:textColor="@color/second"
-                            android:textSize="15sp"
-                            android:textStyle="normal"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/imageView5"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/imageView6"
-                            android:layout_width="41dp"
-                            android:layout_height="34dp"
-                            android:src="@tools:sample/avatars"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.924"
-                            app:layout_constraintStart_toEndOf="@+id/textView5"
+                            app:layout_constraintStart_toEndOf="@+id/textLogout"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.0"
                             app:srcCompat="@drawable/icon_next" />
@@ -534,35 +535,36 @@
                     android:layout_height="37dp"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    tools:layout_editor_absoluteX="27dp">
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="27dp" >
 
-                    <Button
-                        android:id="@+id/button7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Button" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/button8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Button" />
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/button9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Button" />
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@tools:sample/avatars"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
 
-                    <Button
-                        android:id="@+id/button10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Button" />
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="TextView"
+                                app:layout_constraintTop_toBottomOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
