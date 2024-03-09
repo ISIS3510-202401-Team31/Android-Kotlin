@@ -353,7 +353,7 @@
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:id="@+id/imageView16"
+                                android:id="@+id/imageStar1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -361,7 +361,7 @@
                                 app:srcCompat="@drawable/star" />
 
                             <ImageView
-                                android:id="@+id/imageView17"
+                                android:id="@+id/imageStar2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -369,7 +369,7 @@
                                 app:srcCompat="@drawable/star" />
 
                             <ImageView
-                                android:id="@+id/imageView18"
+                                android:id="@+id/imageStar3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -405,7 +405,7 @@
                 android:layout_height="92dp">
 
                 <ImageView
-                    android:id="@+id/imageCarnal"
+                    android:id="@+id/imageCorral"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
@@ -429,7 +429,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageCarnalIcon"
+                        android:id="@+id/imageCorralIcon"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:background="@drawable/circle_icon"
@@ -458,7 +458,7 @@
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:id="@+id/textNameRestaurant"
+                                android:id="@+id/textNameRestaurant2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
@@ -470,7 +470,7 @@
                                 app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
-                                android:id="@+id/textState1"
+                                android:id="@+id/textState2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Open"
@@ -478,7 +478,7 @@
                                 android:textSize="11sp"
                                 android:textStyle="normal"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/textNameRestaurant" />
+                                app:layout_constraintTop_toBottomOf="@+id/textNameRestaurant2" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </LinearLayout>
@@ -507,20 +507,20 @@
                                 android:layout_weight="1">
 
                                 <ImageView
-                                    android:id="@+id/imageCoin"
+                                    android:id="@+id/imageCoin2"
                                     android:layout_width="11dp"
                                     android:layout_height="12dp"
                                     android:layout_marginStart="20dp"
                                     android:layout_weight="1"
                                     android:src="@tools:sample/avatars"
                                     app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toStartOf="@+id/textPrice"
+                                    app:layout_constraintEnd_toStartOf="@+id/textPrice2"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:srcCompat="@drawable/coin" />
 
                                 <TextView
-                                    android:id="@+id/textPrice"
+                                    android:id="@+id/textPrice2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -530,7 +530,7 @@
 
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/imageCoin"
+                                    app:layout_constraintStart_toEndOf="@+id/imageCoin2"
                                     app:layout_constraintTop_toTopOf="parent" />
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -548,19 +548,19 @@
                                 android:layout_weight="1">
 
                                 <ImageView
-                                    android:id="@+id/imageLocation"
+                                    android:id="@+id/imageLocation2"
                                     android:layout_width="18dp"
                                     android:layout_height="12dp"
                                     android:layout_weight="1"
                                     android:src="@tools:sample/avatars"
                                     app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toStartOf="@+id/textDistance"
+                                    app:layout_constraintEnd_toStartOf="@+id/textDistance2"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:srcCompat="@drawable/distance" />
 
                                 <TextView
-                                    android:id="@+id/textDistance"
+                                    android:id="@+id/textDistance2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="5dp"
@@ -570,7 +570,7 @@
                                     android:textSize="11sp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/imageLocation"
+                                    app:layout_constraintStart_toEndOf="@+id/imageLocation2"
                                     app:layout_constraintTop_toTopOf="parent" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -582,7 +582,7 @@
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:id="@+id/imageView16"
+                                android:id="@+id/imageStar4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -590,7 +590,7 @@
                                 app:srcCompat="@drawable/star" />
 
                             <ImageView
-                                android:id="@+id/imageView17"
+                                android:id="@+id/imageStar5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -598,7 +598,7 @@
                                 app:srcCompat="@drawable/star" />
 
                             <ImageView
-                                android:id="@+id/imageView18"
+                                android:id="@+id/imageStar6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -606,7 +606,7 @@
                                 app:srcCompat="@drawable/star" />
 
                             <ImageView
-                                android:id="@+id/imageView19"
+                                android:id="@+id/imageStar7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -640,7 +640,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/textNearby"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -653,7 +653,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/textSeeAll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="20dp"
@@ -705,7 +705,7 @@
                 android:layout_height="92dp">
 
                 <ImageView
-                    android:id="@+id/imageCarnal"
+                    android:id="@+id/imageBlanca"
                     android:layout_width="383dp"
                     android:layout_height="92dp"
                     android:layout_marginStart="50dp"
@@ -729,7 +729,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageCarnalIcon"
+                        android:id="@+id/imageBlancaIcon"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:background="@drawable/circle_icon"
@@ -758,7 +758,7 @@
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:id="@+id/textNameRestaurant"
+                                android:id="@+id/textNameRestaurant3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
@@ -770,7 +770,7 @@
                                 app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
-                                android:id="@+id/textState1"
+                                android:id="@+id/textState3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Open"
@@ -778,7 +778,7 @@
                                 android:textSize="11sp"
                                 android:textStyle="normal"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/textNameRestaurant" />
+                                app:layout_constraintTop_toBottomOf="@+id/textNameRestaurant3" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </LinearLayout>
@@ -807,20 +807,20 @@
                                 android:layout_weight="1">
 
                                 <ImageView
-                                    android:id="@+id/imageCoin"
+                                    android:id="@+id/imageCoin3"
                                     android:layout_width="11dp"
                                     android:layout_height="12dp"
                                     android:layout_marginStart="20dp"
                                     android:layout_weight="1"
                                     android:src="@tools:sample/avatars"
                                     app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toStartOf="@+id/textPrice"
+                                    app:layout_constraintEnd_toStartOf="@+id/textPrice3"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:srcCompat="@drawable/coin" />
 
                                 <TextView
-                                    android:id="@+id/textPrice"
+                                    android:id="@+id/textPrice3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -830,7 +830,7 @@
 
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/imageCoin"
+                                    app:layout_constraintStart_toEndOf="@+id/imageCoin3"
                                     app:layout_constraintTop_toTopOf="parent" />
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -848,19 +848,19 @@
                                 android:layout_weight="1">
 
                                 <ImageView
-                                    android:id="@+id/imageLocation"
+                                    android:id="@+id/imageLocation3"
                                     android:layout_width="18dp"
                                     android:layout_height="12dp"
                                     android:layout_weight="1"
                                     android:src="@tools:sample/avatars"
                                     app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toStartOf="@+id/textDistance"
+                                    app:layout_constraintEnd_toStartOf="@+id/textDistance3"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:srcCompat="@drawable/distance" />
 
                                 <TextView
-                                    android:id="@+id/textDistance"
+                                    android:id="@+id/textDistance3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="5dp"
@@ -870,7 +870,7 @@
                                     android:textSize="11sp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/imageLocation"
+                                    app:layout_constraintStart_toEndOf="@+id/imageLocation3"
                                     app:layout_constraintTop_toTopOf="parent" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -882,7 +882,7 @@
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:id="@+id/imageView16"
+                                android:id="@+id/imageStar8"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -890,7 +890,7 @@
                                 app:srcCompat="@drawable/star" />
 
                             <ImageView
-                                android:id="@+id/imageView17"
+                                android:id="@+id/imageStar9"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -898,7 +898,7 @@
                                 app:srcCompat="@drawable/star" />
 
                             <ImageView
-                                android:id="@+id/imageView18"
+                                android:id="@+id/imageStar10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
