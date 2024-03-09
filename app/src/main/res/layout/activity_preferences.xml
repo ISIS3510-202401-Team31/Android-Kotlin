@@ -36,14 +36,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:src="@drawable/Back_icon"
+                    android:src="@drawable/back_icon"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:src="@drawable/back_icon" />
 
                 <TextView
-                    android:id="@+id/title_Preferences"
+                    android:id="@+id/title_fr_next_you"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="129dp"
@@ -194,7 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="15dp"
                     android:background="@color/fifth"
-                    android:src="@drawable/Burgers"
+                    android:src="@drawable/burgers"
                     android:text="Button" />
 
 
@@ -204,7 +204,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="15dp"
                     android:background="@color/fifth"
-                    android:src="@drawable/Tacos"
+                    android:src="@drawable/tacos"
                     android:text="Button" />
 
                 <ImageButton
@@ -213,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="15dp"
                     android:background="@color/fifth"
-                    android:src="@drawable/Pasta"
+                    android:src="@drawable/pasta"
                     android:text="Button" />
 
                 <ImageButton
