@@ -7,12 +7,20 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import java.util.regex.Pattern
 
 class SignUpActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
+
+        auth = FirebaseAuth.getInstance()
 
         val loginLinkTextView: TextView = findViewById(R.id.loginLinkTextView)
         val signUpButton: Button = findViewById(R.id.signUpButton)
@@ -33,7 +41,7 @@ class SignUpActivity : AppCompatActivity() {
             if (email.endsWith("@uniandes.edu.co")) {
                 if (isValidPassword(password)) {
                     if (password == confirmPassword) {
-                        Toast.makeText(this, "User registered successfully!", Toast.LENGTH_SHORT).show()
+                        signUpUser(email, password)
                     } else {
                         Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
                     }
@@ -55,5 +63,25 @@ class SignUpActivity : AppCompatActivity() {
             "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{8,}$"
         )
         return pattern.matcher(password).matches()
+    }
+
+    private fun signUpUser(email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+
+                    Toast.makeText(this, "User registered successfully!", Toast.LENGTH_SHORT).show()
+
+                } else {
+                    val exception = task.exception
+                    if (exception is FirebaseAuthUserCollisionException) {
+                        Toast.makeText(this, "Email address is already in use", Toast.LENGTH_SHORT).show()
+                    } else if (exception is FirebaseAuthInvalidCredentialsException) {
+                        Toast.makeText(this, "Invalid email address or password format", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this, "Registration failed. Please try again later", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
     }
 }
