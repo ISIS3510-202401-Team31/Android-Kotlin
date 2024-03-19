@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "746895338475",
+    "firebase_url": "https://unifood-31-default-rtdb.firebaseio.com",
+    "project_id": "unifood-31",
+    "storage_bucket": "unifood-31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746895338475:android:3afb4f328f90e0c02307ae",
+        "android_client_info": {
+          "package_name": "com.example.unifood"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmcPvwlnEM5j95fYRBUvN26bqFR6pQqJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
