@@ -2,4 +2,25 @@
     <string name="app_name">UniFood</string>
     <string name="login">Login</string>
     <string name="sing_up">Sing Up</string>
+    <string name="b1">Button to view friend maps</string>
+    <string name="b2">Button to view profile view</string>
+    <string name="i1">Image Logo app</string>
+    <string name="t1">Favorites</string>
+    <string name="b3">Button to search</string>
+    <string name="b4">Bottom image restaurant to detail</string>
+    <string name="r1">El Carnal</string>
+    <string name="e1">Closed</string>
+    <string name="i2">Icon to price</string>
+    <string name="p1">16-25 K</string>
+    <string name="i3">Icon of Location</string>
+    <string name="l1">2.3 km away</string>
+    <string name="s1">a star rating</string>
+    <string name="s2">second star rating</string>
+    <string name="s3">third star rating</string>
+    <string name="s4">fourth star rating</string>
+    <string name="t2">Nearby</string>
+    <string name="t3"> see all ></string>
+    <string name="b5">Bottom image restaurant 2 to detail</string>
+    <string name="b6">Bottom image restaurant 3 to detail</string>
+    <string name="b7">Bottom image restaurant 4 to detail</string>
 </resources>

@@ -143,7 +143,7 @@
             android:layout_marginEnd="20dp">
 
             <View
-                android:id="@+id/view3"
+                android:id="@+id/separatorLine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#965E4E"
@@ -200,7 +200,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageCarnalIcon"
+                        android:id="@+id/IconRestaurant"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:background="@drawable/circle_icon"
@@ -278,7 +278,7 @@
                                 android:layout_weight="1">
 
                                 <ImageView
-                                    android:id="@+id/imageCoin"
+                                    android:id="@+id/imageCoin2"
                                     android:layout_width="11dp"
                                     android:layout_height="12dp"
                                     android:layout_marginStart="20dp"
@@ -301,7 +301,7 @@
 
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/imageCoin"
+                                    app:layout_constraintStart_toEndOf="@+id/imageCoin2"
                                     app:layout_constraintTop_toTopOf="parent" />
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -353,7 +353,7 @@
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:id="@+id/imageStar1"
+                                android:id="@+id/imageStar5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
