@@ -1,3 +1,5 @@
+package com.example.unifood
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope

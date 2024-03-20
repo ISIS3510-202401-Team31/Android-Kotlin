@@ -100,7 +100,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="26dp"
-                        android:text="@string/t1"
+                        android:text="@string/favorites"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -185,19 +185,6 @@
                                 android:layout_width="61dp"
                                 android:layout_height="match_parent">
 
-                                <ImageView
-                                    android:id="@+id/IconRestaurant"
-                                    android:layout_width="35dp"
-                                    android:layout_height="35dp"
-                                    android:background="@drawable/circle_icon"
-                                    android:contentDescription="@string/app_name"
-                                    android:elevation="3dp"
-                                    android:src="@tools:sample/avatars"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:srcCompat="@drawable/logo_carnal" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -268,18 +255,7 @@
                                     android:layout_height="0dp"
                                     android:layout_weight="1">
 
-                                    <ImageView
-                                        android:id="@+id/imageLocation"
-                                        android:layout_width="18dp"
-                                        android:layout_height="12dp"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/i3"
-                                        android:src="@tools:sample/avatars"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintEnd_toStartOf="@+id/textDistance"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:srcCompat="@drawable/distance" />
+
 
                                     <TextView
                                         android:id="@+id/textDistance"
@@ -292,7 +268,6 @@
                                         android:textSize="11sp"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintStart_toEndOf="@+id/imageLocation"
                                         app:layout_constraintTop_toTopOf="parent" />
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -301,44 +276,6 @@
                                     android:layout_height="14dp"
                                     android:orientation="horizontal">
 
-                                    <ImageView
-                                        android:id="@+id/imageStar1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s1"
-                                        android:src="@tools:sample/avatars"
-                                        app:srcCompat="@drawable/star" />
-
-                                    <ImageView
-                                        android:id="@+id/imageStar2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s2"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
-
-                                    <ImageView
-                                        android:id="@+id/imageStar3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s3"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
-
-                                    <ImageView
-                                        android:id="@+id/imageStar4"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s4"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -394,19 +331,7 @@
                                 android:layout_width="61dp"
                                 android:layout_height="match_parent">
 
-                                <ImageView
-                                    android:id="@+id/IconRestaurant2"
-                                    android:layout_width="35dp"
-                                    android:layout_height="35dp"
-                                    android:background="@drawable/circle_icon"
-                                    android:contentDescription="@string/app_name"
-                                    android:elevation="3dp"
-                                    android:src="@tools:sample/avatars"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:srcCompat="@drawable/logo_carnal" />
+
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -477,18 +402,7 @@
                                     android:layout_height="0dp"
                                     android:layout_weight="1">
 
-                                    <ImageView
-                                        android:id="@+id/imageLocation2"
-                                        android:layout_width="18dp"
-                                        android:layout_height="12dp"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/i3"
-                                        android:src="@tools:sample/avatars"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintEnd_toStartOf="@+id/textDistance2"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:srcCompat="@drawable/distance" />
+
 
                                     <TextView
                                         android:id="@+id/textDistance2"
@@ -510,44 +424,13 @@
                                     android:layout_height="14dp"
                                     android:orientation="horizontal">
 
-                                    <ImageView
-                                        android:id="@+id/image2Star1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s1"
-                                        android:src="@tools:sample/avatars"
-                                        app:srcCompat="@drawable/star" />
 
-                                    <ImageView
-                                        android:id="@+id/image2Star2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s2"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
 
-                                    <ImageView
-                                        android:id="@+id/image2Star3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s3"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
 
-                                    <ImageView
-                                        android:id="@+id/image2Star4"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s4"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
+
+
+
+
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -654,19 +537,7 @@
                                 android:layout_width="61dp"
                                 android:layout_height="match_parent">
 
-                                <ImageView
-                                    android:id="@+id/IconRestaurant3"
-                                    android:layout_width="35dp"
-                                    android:layout_height="35dp"
-                                    android:background="@drawable/circle_icon"
-                                    android:contentDescription="@string/app_name"
-                                    android:elevation="3dp"
-                                    android:src="@tools:sample/avatars"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:srcCompat="@drawable/logo_carnal" />
+
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -737,18 +608,7 @@
                                     android:layout_height="0dp"
                                     android:layout_weight="1">
 
-                                    <ImageView
-                                        android:id="@+id/imageLocation3"
-                                        android:layout_width="18dp"
-                                        android:layout_height="12dp"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/i3"
-                                        android:src="@tools:sample/avatars"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintEnd_toStartOf="@+id/textDistance3"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:srcCompat="@drawable/distance" />
+
 
                                     <TextView
                                         android:id="@+id/textDistance3"
@@ -770,44 +630,9 @@
                                     android:layout_height="14dp"
                                     android:orientation="horizontal">
 
-                                    <ImageView
-                                        android:id="@+id/image3Star1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s1"
-                                        android:src="@tools:sample/avatars"
-                                        app:srcCompat="@drawable/star" />
 
-                                    <ImageView
-                                        android:id="@+id/image3Star2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s2"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
 
-                                    <ImageView
-                                        android:id="@+id/image3Star3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s3"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
 
-                                    <ImageView
-                                        android:id="@+id/image3Star4"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s4"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -863,19 +688,8 @@
                                 android:layout_width="61dp"
                                 android:layout_height="match_parent">
 
-                                <ImageView
-                                    android:id="@+id/IconRestaurant4"
-                                    android:layout_width="35dp"
-                                    android:layout_height="35dp"
-                                    android:background="@drawable/circle_icon"
-                                    android:contentDescription="@string/app_name"
-                                    android:elevation="3dp"
-                                    android:src="@tools:sample/avatars"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:srcCompat="@drawable/logo_carnal" />
+
+
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -946,18 +760,7 @@
                                     android:layout_height="0dp"
                                     android:layout_weight="1">
 
-                                    <ImageView
-                                        android:id="@+id/imageLocation4"
-                                        android:layout_width="18dp"
-                                        android:layout_height="12dp"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/i3"
-                                        android:src="@tools:sample/avatars"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintEnd_toStartOf="@+id/textDistance4"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:srcCompat="@drawable/distance" />
+
 
                                     <TextView
                                         android:id="@+id/textDistance4"
@@ -970,7 +773,6 @@
                                         android:textSize="11sp"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintStart_toEndOf="@+id/imageLocation4"
                                         app:layout_constraintTop_toTopOf="parent" />
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -979,44 +781,10 @@
                                     android:layout_height="14dp"
                                     android:orientation="horizontal">
 
-                                    <ImageView
-                                        android:id="@+id/image4Star1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s1"
-                                        android:src="@tools:sample/avatars"
-                                        app:srcCompat="@drawable/star" />
 
-                                    <ImageView
-                                        android:id="@+id/image4Star2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s2"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
 
-                                    <ImageView
-                                        android:id="@+id/image4Star3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s3"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
 
-                                    <ImageView
-                                        android:id="@+id/image4Star4"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:contentDescription="@string/s4"
-                                        android:src="@tools:sample/avatars"
-                                        android:visibility="gone"
-                                        app:srcCompat="@drawable/star" />
+
                                 </LinearLayout>
                             </LinearLayout>
 
