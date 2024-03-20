@@ -34,6 +34,12 @@ class RestaurantViewModel(private val context: Context) {
         return mapRestaurantData(data, userLocation)
     }
 
+    suspend fun getMostVisitedRestaurants(limit: Int): List<Restaurant> {
+        val data = restaurantRepository.getMostVisitedRestaurants(limit)
+        val userLocation = getUserLocation(context)
+        return mapRestaurantData(data, userLocation)
+    }
+
     private suspend fun getUserLocation(context: Context): Location {
         try {
             return locationRepository.getUserLocation(context) ?: throw IllegalStateException("User location not found")

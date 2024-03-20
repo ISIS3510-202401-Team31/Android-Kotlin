@@ -3,8 +3,9 @@ package com.example.unifood.repository
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
-import org.json.JSONObject
+import com.google.firebase.firestore.Query
 import java.lang.Exception
+import org.json.JSONObject
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
@@ -52,6 +53,24 @@ class RestaurantRepository {
             }
         } catch (error: Exception) {
             Log.e("RestaurantRepository", "Error fetching recommended restaurants: $error")
+            throw error
+        }
+    }
+
+    suspend fun getMostVisitedRestaurants(limit: Int): List<Map<String, Any>> {
+        return try {
+            val querySnapshot = databaseInstance.collection("restaurants")
+                .orderBy("likes", Query.Direction.DESCENDING)
+                .limit(limit.toLong())
+                .get().await()
+
+            querySnapshot.documents.map { doc ->
+                val restaurantData = doc.data!!
+                restaurantData["docId"] = doc.id
+                restaurantData
+            }
+        } catch (error: Exception) {
+            Log.e("RestaurantRepository", "Error fetching most visited restaurants: $error")
             throw error
         }
     }
