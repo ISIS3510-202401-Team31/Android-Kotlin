@@ -1,94 +1,87 @@
 package com.example.unifood
 
-package com.example.unifood
-
 import android.Manifest
-import android.content.ContentValues
-import android.content.Intent
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
-import android.widget.ImageView
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.unifood.model.ProfileModel
 
 class ProfileActivity : AppCompatActivity() {
-    private lateinit var profileImageView: ImageView
-    private lateinit var imageUri: Uri
 
-    private val requestCameraPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
-        if (isGranted) {
-            openCamera()
-        } else {
-            Toast.makeText(this, "Camera permission denied", Toast.LENGTH_SHORT).show()
-        }
+    private lateinit var locationTextView: TextView
+    private lateinit var profileModel: ProfileModel
+
+    companion object {
+        private const val LOCATION_PERMISSION_REQUEST_CODE = 1
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
-        profileImageView = findViewById(R.id.profilePicture)
+        locationTextView = findViewById(R.id.location)
 
-        profileImageView.setOnClickListener {
-            checkCameraPermissionAndOpenCamera()
+        profileModel = ProfileModel(this)
+
+        // Solicitar permisos de ubicación si no están otorgados
+        if (!hasLocationPermission()) {
+            requestLocationPermission()
+        } else {
+            getLocation()
         }
     }
 
-    private fun checkCameraPermissionAndOpenCamera() {
-        when {
-            ContextCompat.checkSelfPermission(
-                this,
-                Manifest.permission.CAMERA
-            ) == PackageManager.PERMISSION_GRANTED -> {
-                openCamera()
-            }
-            ActivityCompat.shouldShowRequestPermissionRationale(
-                this,
-                Manifest.permission.CAMERA
-            ) -> {
-                showPermissionRationale()
-            }
-            else -> {
-                requestCameraPermission()
-            }
+    private fun hasLocationPermission(): Boolean {
+        return ContextCompat.checkSelfPermission(
+            this,
+            Manifest.permission.ACCESS_FINE_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                ) == PackageManager.PERMISSION_GRANTED
+    }
+
+    private fun requestLocationPermission() {
+        ActivityCompat.requestPermissions(
+            this,
+            arrayOf(
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ),
+            LOCATION_PERMISSION_REQUEST_CODE
+        )
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == LOCATION_PERMISSION_REQUEST_CODE &&
+            grantResults.all { it == PackageManager.PERMISSION_GRANTED }
+        ) {
+            getLocation()
+        } else {
+            locationTextView.text = "Location permission denied"
         }
     }
 
-    private fun showPermissionRationale() {
-        Toast.makeText(this, "Camera permission is needed to take a photo", Toast.LENGTH_SHORT).show()
-        requestCameraPermission()
-    }
+    @SuppressLint("MissingPermission")
+    private fun getLocation() {
+        val location = profileModel.getLastKnownLocation()
 
-    private fun requestCameraPermission() {
-        requestCameraPermissionLauncher.launch(Manifest.permission.CAMERA)
-    }
-
-    private fun openCamera() {
-        val values = ContentValues().apply {
-            put(MediaStore.Images.Media.TITLE, "New Picture")
-            put(MediaStore.Images.Media.DESCRIPTION, "From the Camera")
+        if (location != null) {
+            val latitude = location.latitude
+            val longitude = location.longitude
+            locationTextView.text = "Location: Latitud: $latitude, Longitud: $longitude"
+        } else {
+            locationTextView.text = "Location not available"
         }
-        imageUri = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)!!
-
-        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
-            takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri)
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
-        }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            profileImageView.setImageURI(imageUri)
-        }
-    }
-
-    companion object {
-        private const val REQUEST_IMAGE_CAPTURE = 101
     }
 }

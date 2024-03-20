@@ -13,7 +13,7 @@ import androidx.core.content.ContextCompat
 class LocationRepository {
 
     private val fusedLocationClient: FusedLocationProviderClient by lazy {
-        LocationServices.getFusedLocationProviderClient(context)
+        LocationServices.getFusedLocationProviderClient(Context)
     }
 
     suspend fun getUserLocation(context: Context): Location? {
