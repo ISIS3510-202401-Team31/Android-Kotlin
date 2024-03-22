@@ -35,5 +35,17 @@
         android:textSize="18sp"
         android:padding="10dp" />
 
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/loginButton"
+        android:layout_marginBottom="25dp"
+        android:background="@color/fourth"
+        android:textSize="18sp"
+        android:padding="10dp" />
+
 </RelativeLayout>
 

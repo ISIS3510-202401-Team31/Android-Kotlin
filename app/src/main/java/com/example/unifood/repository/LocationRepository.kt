@@ -2,21 +2,20 @@ package com.example.unifood.repository
 
 import android.content.pm.PackageManager
 import android.location.Location
+import android.content.Context
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
-import android.content.Context
 import androidx.core.content.ContextCompat
 
 class LocationRepository {
 
-    private val fusedLocationClient: FusedLocationProviderClient by lazy {
-        LocationServices.getFusedLocationProviderClient(Context)
-    }
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     suspend fun getUserLocation(context: Context): Location? {
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(context)
         return withContext(Dispatchers.IO) {
             // Verificar si tenemos permiso de ubicación
             if (hasLocationPermission(context)) {

@@ -14,3 +14,4 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
         return profileRepository.getLastKnownLocation()
     }
 }
+
