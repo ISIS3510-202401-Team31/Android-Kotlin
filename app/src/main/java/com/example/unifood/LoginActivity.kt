@@ -60,9 +60,10 @@ class LoginActivity : AppCompatActivity() {
 
     private fun updateUI(user: FirebaseUser?) {
         if (user != null) {
-
             Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
-
+            val intent = Intent(this, RestaurantActivity::class.java)
+            startActivity(intent)
+            finish() // Esto evita que el usuario pueda volver atrás presionando el botón de atrás en la vista de restaurantes
         } else {
             // Handle unsuccessful login
             Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()

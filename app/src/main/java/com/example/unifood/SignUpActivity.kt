@@ -69,9 +69,10 @@ class SignUpActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-
                     Toast.makeText(this, "User registered successfully!", Toast.LENGTH_SHORT).show()
-
+                    val intent = Intent(this, RestaurantActivity::class.java)
+                    startActivity(intent)
+                    finish() // Esto evita que el usuario pueda volver atrás presionando el botón de atrás en la vista de restaurantes
                 } else {
                     val exception = task.exception
                     if (exception is FirebaseAuthUserCollisionException) {

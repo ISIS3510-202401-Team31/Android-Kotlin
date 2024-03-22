@@ -58,3 +58,4 @@ class RestaurantActivity : AppCompatActivity() {
         }
     }
 }
+

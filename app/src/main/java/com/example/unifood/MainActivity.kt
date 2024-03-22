@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         val signUpButton: Button = findViewById(R.id.signUpButton)
         val loginButton: Button = findViewById(R.id.loginButton)
+        val profileButton: Button = findViewById(R.id.profileButton) // Nuevo botón
 
         signUpButton.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
@@ -22,8 +23,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
+        profileButton.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
-
-
 
