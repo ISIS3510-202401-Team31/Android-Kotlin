@@ -31,4 +31,6 @@ class ProfileRepository(private val context: Context) {
         // Obtener la última ubicación conocida
         return locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
     }
+
+
 }
