@@ -39,7 +39,9 @@
                     android:src="@drawable/back_icon"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="Back Button"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/title_fr_next_you"
@@ -94,12 +96,13 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TableRow
+                android:id="@+id/res_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/box_border_fifth_color"
+                android:background="@drawable/box_border_fourth_color"
                 android:foregroundGravity="center"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -176,12 +179,13 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TableRow
+                android:id="@+id/tastes_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/box_border_fifth_color"
+                android:background="@drawable/box_border_fourth_color"
                 android:foregroundGravity="center"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -193,8 +197,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="15dp"
                     android:background="@color/fifth"
+                    android:contentDescription="TODO"
                     android:src="@drawable/burgers"
-                    android:text="Button" />
+                    android:text="Button"
+                    tools:ignore="HardcodedText" />
 
 
                 <ImageButton
@@ -253,7 +259,7 @@
                     android:id="@+id/range_seek_bar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/box_border_fifth_color"
+                    android:background="@drawable/box_border_fourth_color"
                     android:backgroundTint="@color/fourth"
                     android:scrollbars="horizontal"
                     android:valueFrom="0.0"
@@ -284,31 +290,36 @@
                     android:id="@+id/ck_box_recommend_daily_discounts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Recommend Restaurants with Daily Discounts" />
+                    android:text="Recommend Restaurants with Daily Discounts"
+                    tools:ignore="HardcodedText" />
 
                 <CheckBox
                     android:id="@+id/ck_box_only_healthy_res"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Only Recommend Healthy Restaurants" />
+                    android:text="Only Recommend Healthy Restaurants"
+                    tools:ignore="HardcodedText" />
 
                 <CheckBox
                     android:id="@+id/ck_box_notify_enough_points"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Notify Me When I Have Enough Redeemable Points" />
+                    android:text="Notify Me When I Have Enough Redeemable Points"
+                    tools:ignore="HardcodedText" />
 
                 <CheckBox
                     android:id="@+id/ck_box_show_res_out_prange"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Show Restaurants Slightly out of my Price Range" />
+                    android:text="Show Restaurants Slightly out of my Price Range"
+                    tools:ignore="HardcodedText" />
 
                 <CheckBox
                     android:id="@+id/ck_box_enable_loc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Enable Location while not using the app" />
+                    android:text="Enable Location while not using the app"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
         </LinearLayout>
