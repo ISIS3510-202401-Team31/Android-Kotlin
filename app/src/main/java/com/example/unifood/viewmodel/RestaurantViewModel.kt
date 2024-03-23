@@ -30,7 +30,7 @@ class RestaurantViewModel(private val context: Context) {
         return filterNearbyRestaurants(data, userLocation)
     }
 
-    suspend fun getRecommendedRestaurants(userId: String, categoryFilter: String): List<Restaurant> {
+    suspend fun getRecommendedRestaurants(userId: String?, categoryFilter: String): List<Restaurant> {
         val data = restaurantRepository.fetchRecommendedRestaurants(userId, categoryFilter)
         val userLocation = getUserLocation(context)
         return mapRestaurantData(data, userLocation)

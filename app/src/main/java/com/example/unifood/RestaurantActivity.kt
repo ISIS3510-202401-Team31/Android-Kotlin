@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.unifood.model.Plate
+import com.example.unifood.model.Restaurant
 import com.example.unifood.repository.LocationRepository
 import com.example.unifood.repository.RestaurantRepository
 import com.example.unifood.viewmodel.RestaurantViewModel
@@ -19,6 +20,8 @@ class RestaurantActivity : AppCompatActivity() {
     private lateinit var mostVisitedTextView: TextView
     private lateinit var restaurantViewModel: RestaurantViewModel
     private lateinit var favoriteDishesTextView: TextView
+    private lateinit var recommendedTextView: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurant)
@@ -32,6 +35,7 @@ class RestaurantActivity : AppCompatActivity() {
         // Inicializar el view model del restaurante
         restaurantViewModel = RestaurantViewModel(applicationContext)
 
+        recommendedTextView = findViewById(R.id.recommendedTextView)
 
         // Inicializar el repositorio del restaurante
         restaurantRepository = RestaurantRepository()
@@ -44,8 +48,15 @@ class RestaurantActivity : AppCompatActivity() {
 
         // Obtener la ubicación del usuario usando coroutines
         lifecycleScope.launch {
+            try {
             val locationRepository = LocationRepository()
+
             val userLocation = locationRepository.getUserLocation(this@RestaurantActivity)
+
+            val recommendedRestaurants = restaurantViewModel.getRecommendedRestaurants(userId, "Nut Free")
+
+            // Mostrar los restaurantes recomendados en el TextView
+            showRecommendedRestaurants(recommendedRestaurants)
 
             // Mostrar los restaurantes más visitados
             showMostVisitedRestaurants(userLocation)
@@ -54,6 +65,10 @@ class RestaurantActivity : AppCompatActivity() {
 
             // Mostrar los platos favoritos del usuario
             showFavoriteDishes(favoriteDishes)
+            } catch (e: Exception) {
+                e.printStackTrace()
+                recommendedTextView.text = "Error al cargar los restaurantes recomendados"
+            }
         }
     }
 
@@ -96,6 +111,14 @@ class RestaurantActivity : AppCompatActivity() {
             // Mostrar un mensaje de error en caso de falla
             favoriteDishesTextView.text = "Error al cargar los platos favoritos del usuario"
         }
+    }
+
+    private fun showRecommendedRestaurants(recommendedRestaurants: List<Restaurant>) {
+        val stringBuilder = StringBuilder()
+        recommendedRestaurants.forEachIndexed { index, restaurant ->
+            stringBuilder.append("${index + 1}. ${restaurant.name} (${restaurant.likes} likes)\n")
+        }
+        recommendedTextView.text = stringBuilder.toString()
     }
 }
 
