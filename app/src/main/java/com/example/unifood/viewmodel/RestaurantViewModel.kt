@@ -3,6 +3,7 @@ package com.example.unifood.viewmodel
 import android.content.Context
 import android.location.Location
 import android.util.Log
+import com.example.unifood.model.Plate
 import com.example.unifood.model.Restaurant
 import com.example.unifood.repository.LocationRepository
 import com.example.unifood.repository.RestaurantRepository
@@ -11,6 +12,7 @@ import com.example.unifood.utils.DistanceCalculator
 class RestaurantViewModel(private val context: Context) {
     private val restaurantRepository = RestaurantRepository()
     private val locationRepository = LocationRepository()
+
 
     suspend fun getRestaurants(): List<Restaurant> {
         return getRestaurantData(getUserLocation(context))
@@ -39,6 +41,11 @@ class RestaurantViewModel(private val context: Context) {
         val userLocation = getUserLocation(context)
         return mapRestaurantData(data, userLocation)
     }
+
+    suspend fun getUserFavoriteDishes(userId: String?): List<Plate> {
+        return restaurantRepository.getUserFavoriteDishes(userId)
+    }
+
 
     private suspend fun getUserLocation(context: Context): Location {
         try {
