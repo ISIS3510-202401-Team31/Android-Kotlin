@@ -62,7 +62,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="50dp"
-            android:background="@drawable/box_border_fifth_color"
+            android:background="@drawable/box_border_fourth_color"
             android:clickable="true"
             android:contentDescription="Map" />
 

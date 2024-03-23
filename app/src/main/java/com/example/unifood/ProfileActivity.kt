@@ -2,6 +2,7 @@ package com.example.unifood
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.TextView
@@ -15,10 +16,12 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var locationTextView: TextView
     private lateinit var profileModel: ProfileModel
 
+
     companion object {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1
     }
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
@@ -26,6 +29,13 @@ class ProfileActivity : AppCompatActivity() {
         locationTextView = findViewById(R.id.location)
 
         profileModel = ProfileModel(this)
+
+        val preferencesTextView: TextView = findViewById(R.id.textPreferences)
+
+        preferencesTextView.setOnClickListener{
+            val intent = Intent(this, PreferencesActivity::class.java)
+            startActivity(intent)
+        }
 
         // Solicitar permisos de ubicación si no están otorgados
         if (!hasLocationPermission()) {
