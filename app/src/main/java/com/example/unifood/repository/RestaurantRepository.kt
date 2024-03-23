@@ -37,7 +37,7 @@ class RestaurantRepository {
         }
     }
 
-    fun fetchRecommendedRestaurants(userId: String, categoryFilter: String): List<Map<String, Any>> {
+    fun fetchRecommendedRestaurants(userId: String?, categoryFilter: String): List<Map<String, Any>> {
         return try {
             val url = URL("http://192.168.0.21:5000/recommend/$userId/$categoryFilter")
             val connection = url.openConnection() as HttpsURLConnection
