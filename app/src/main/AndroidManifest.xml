@@ -31,6 +31,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".ProfileActivity"/>
         <activity android:name=".RestaurantActivity" />
+        <activity android:name=".PreferencesActivity" />
+        <activity android:name=".PreferencesModRestActivity" />
     </application>
 
 </manifest>

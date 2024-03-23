@@ -107,7 +107,7 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="5dp">
-
+                <!--
                 <ImageButton
                     android:id="@+id/vegan_button"
                     android:layout_width="wrap_content"
@@ -144,6 +144,7 @@
                     android:background="@color/fifth"
                     android:src="@drawable/sugar"
                     android:text="Button" />
+                    -->
             </TableRow>
 
             <androidx.constraintlayout.widget.ConstraintLayout

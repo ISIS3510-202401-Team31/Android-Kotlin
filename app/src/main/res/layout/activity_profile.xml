@@ -129,12 +129,13 @@
             android:textColor="@android:color/black" />
 
         <TextView
+            android:id="@+id/textPreferences"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="View and manage your account preferences"
-            android:textSize="14sp"
             android:layout_marginTop="4dp"
-            android:textColor="@android:color/darker_gray" />
+            android:text="View and manage your account preferences"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"

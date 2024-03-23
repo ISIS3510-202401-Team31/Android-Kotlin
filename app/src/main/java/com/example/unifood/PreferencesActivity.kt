@@ -11,17 +11,20 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TableRow
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.unifood.model.Preferences
 import com.example.unifood.viewmodel.PreferencesViewModel
 import com.squareup.picasso.Picasso
+import kotlinx.coroutines.launch
 import java.util.regex.Pattern
 
 class PreferencesActivity: AppCompatActivity() {
 
     private lateinit var viewModel: PreferencesViewModel
     private lateinit var pref: Preferences
-    private lateinit var d_restrictions: TableRow
+    private lateinit var dRestrictions: TableRow
     private lateinit var tastes: TableRow
     private val REQUEST_SELECT_DIET = 1
 
@@ -29,16 +32,23 @@ class PreferencesActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_preferences)
 
-        viewModel = PreferencesViewModel(this.application)
 
-        d_restrictions = findViewById(R.id.res_layout)
-        tastes = findViewById(R.id.tastes_layout)
-        val mod_res: Button = findViewById(R.id.modify_res_button)
-        val mod_tastes: Button = findViewById(R.id.modify_tastes_button)
+        lifecycleScope.launch {
+            viewModel = PreferencesViewModel()
+            pref = createPref()
 
-        mod_res.setOnClickListener{
-            val intent = Intent(this,PreferencesModRestActivity(pref.dietRestrictions)::class.java)
-            startActivity(intent)
+
+            dRestrictions = findViewById(R.id.res_layout)
+            tastes = findViewById(R.id.tastes_layout)
+            val mod_res: Button = findViewById(R.id.modify_res_button)
+            val mod_tastes: Button = findViewById(R.id.modify_tastes_button)
+
+            mod_res.setOnClickListener {
+                val intent =
+                    Intent(this@PreferencesActivity, PreferencesModRestActivity::class.java)
+                PreferencesModRestActivity.dRestData = pref.dietRestrictions
+                startActivity(intent)
+            }
         }
     }
 
@@ -58,12 +68,14 @@ class PreferencesActivity: AppCompatActivity() {
                     imageView.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
                     imageView.setPadding(10,10,10,10)
 
-                    d_restrictions.addView(imageView)
+                    dRestrictions.addView(imageView)
                 }
 
             }
         }
     }
-
+    private suspend fun createPref(): Preferences{
+        return viewModel.getPreferences()
+    }
     //val pref = viewModel.getPreferences()
 }

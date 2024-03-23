@@ -10,14 +10,23 @@ import android.widget.TableRow
 import androidx.appcompat.app.AppCompatActivity
 import com.example.unifood.R.layout
 import com.example.unifood.R.id
+import com.google.firebase.auth.FirebaseAuth
 import com.squareup.picasso.Picasso
 
-class PreferencesModRestActivity(dRest: Map<String,String>) : AppCompatActivity() {
-    private val dRest = dRest
+class PreferencesModRestActivity : AppCompatActivity() {
+
+
+    private lateinit var dRest: Map<String, String>
     private var selected: MutableList<String> = mutableListOf()
+    //private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layout.activity_preferences_mod_d_rest)
+        dRest= dRestData
+        //auth = FirebaseAuth.getInstance()
+
+        //auth.signInWithEmailAndPassword("j.davilap@uniandes.edu.co","LegendofZelda55@")
 
         val layout = findViewById<TableRow>(id.rest_layout)
         val acceptButton = findViewById<Button>(id.accept_button)
@@ -27,8 +36,8 @@ class PreferencesModRestActivity(dRest: Map<String,String>) : AppCompatActivity(
 
             Picasso.get().load(value).into(imageButton)
             imageButton.setBackgroundResource(R.drawable.box_border_fourth_color)
-            imageButton.layoutParams.width = ViewGroup.LayoutParams.WRAP_CONTENT
-            imageButton.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
+            //imageButton.layoutParams.width = ViewGroup.LayoutParams.WRAP_CONTENT
+            //imageButton.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
             imageButton.setPadding(10,10,10,10)
 
             imageButton.setOnClickListener{
@@ -56,6 +65,8 @@ class PreferencesModRestActivity(dRest: Map<String,String>) : AppCompatActivity(
             finish()
         }
     }
-
+    companion object {
+        lateinit var dRestData: Map<String, String>
+    }
 
 }

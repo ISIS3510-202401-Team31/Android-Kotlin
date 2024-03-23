@@ -6,8 +6,10 @@ import com.example.unifood.model.Preferences
 import com.example.unifood.repository.PreferencesRepository;
 import org.json.JSONObject
 
-class PreferencesViewModel(application:Application) : AndroidViewModel(application){
-    private val preferencesRepository = PreferencesRepository(application.applicationContext)
+class PreferencesViewModel(){
+    private val preferencesRepository = PreferencesRepository()
+
+
 
     suspend fun getPreferences(): Preferences {
         val pref = preferencesRepository.getPreferences()

@@ -6,7 +6,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
 import java.lang.Exception
 
-class PreferencesRepository(private val context: Context) {
+class PreferencesRepository() {
     private val databaseInstance = FirebaseFirestore.getInstance()
 
     suspend fun getPreferences(): Map<String, Any> {
